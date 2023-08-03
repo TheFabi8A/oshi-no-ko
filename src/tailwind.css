@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[class^="face"] {
+  --gradient: linear-gradient(
+    45deg,
+    hsl(241deg 36% 31%) 0%,
+    hsl(254deg 42% 36%) 4%,
+    hsl(268deg 48% 40%) 9%,
+    hsl(281deg 54% 45%) 13%,
+    hsl(295deg 60% 49%) 17%,
+    hsl(308deg 67% 53%) 22%,
+    hsl(322deg 72% 57%) 26%,
+    hsl(335deg 78% 62%) 30%,
+    hsl(347deg 82% 65%) 35%,
+    hsl(354deg 83% 64%) 39%,
+    hsl(2deg 84% 64%) 43%,
+    hsl(9deg 84% 64%) 48%,
+    hsl(17deg 85% 63%) 52%,
+    hsl(24deg 85% 63%) 57%,
+    hsl(31deg 85% 62%) 61%,
+    hsl(39deg 87% 62%) 65%,
+    hsl(27deg 83% 59%) 70%,
+    hsl(7deg 75% 55%) 74%,
+    hsl(346deg 69% 51%) 78%,
+    hsl(325deg 63% 47%) 83%,
+    hsl(303deg 56% 43%) 87%,
+    hsl(283deg 49% 39%) 91%,
+    hsl(262deg 43% 35%) 96%,
+    hsl(241deg 36% 31%) 100%
+  );
+}
+
+.container.active {
+  transform: rotateY(-110deg);
+}
+
+.face-top {
+  width: 100%;
+  height: 50px;
+  background-image: var(--gradient);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateZ(-50px) rotateX(90deg) !important;
+  transform-origin: center top;
+  z-index: 10;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+.face-left {
+  width: 50px;
+  height: 100%;
+  background-image: var(--gradient);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateZ(-50px) rotateY(-90deg) !important;
+  transform-origin: left center;
+  z-index: 10;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+.face-right {
+  width: 50px;
+  height: 100%;
+  background-image: var(--gradient);
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateZ(-50px) rotateY(90deg) !important;
+  transform-origin: right center;
+  z-index: 10;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+.face-bottom {
+  width: 100%;
+  height: 50px;
+  background-image: var(--gradient);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateZ(-50px) rotateX(-90deg) !important;
+  transform-origin: center bottom;
+  z-index: 10;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+  background-color: #ffffff00;
+  background-position: 50% 50%;
+  background-size: 100%;
+  background-blend-mode: overlay;
+  mix-blend-mode: color-dodge;
+  opacity: 1;
+}
+
+.container-content {
+  transform: translateZ(-50px);
+}
+
+.cassette {
+  width: 350px;
+  background-color: red;
+  height: 250px;
+}
