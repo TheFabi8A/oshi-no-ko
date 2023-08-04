@@ -13,7 +13,7 @@ export default function App() {
     <>
       <div className="absolute top-[calc(50%_-_80px)] h-40 w-96 bg-purple-500"></div>
 
-      <div id="app" className="app relative w-full max-w-md">
+      <div id="app" className="app relative w-full max-w-xs">
         <Atropos
           onClick={toggleCassetteVisible}
           highlight={true}
@@ -33,14 +33,19 @@ export default function App() {
           <span className="face-right"></span>
           <span className="face-bottom"></span>
           <div className="container-content absolute grid h-full w-full place-items-center bg-white">
-            <div className="cassette"></div>
+            <div className="h-40 w-64 bg-blue-500"></div>
           </div>
           <div
             className={`container origin-left transition-transform duration-700 ${
               isCassetteVisible ? "active" : ""
             }`}
           >
-            <img data-atropos-offset="0" src="assets/oshi-no-ko.webp" alt="" />
+            <img
+              className="relative"
+              data-atropos-offset="0"
+              src="assets/oshi-no-ko.webp"
+              alt=""
+            />
             {/* piezas */}
             <img
               className="absolute left-[35px] top-[37.5%] w-[36%] md:left-11"

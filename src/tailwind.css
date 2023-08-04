@@ -111,9 +111,3 @@
 .container-content {
   transform: translateZ(-50px);
 }
-
-.cassette {
-  width: 350px;
-  background-color: red;
-  height: 250px;
-}
