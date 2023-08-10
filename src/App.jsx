@@ -1,19 +1,32 @@
 import Atropos from "atropos/react";
 import "atropos/css";
-import { useState } from "react";
+import { useState, useRef, createContext } from "react";
+import { Cassette, HolographicStickert } from "./component/Cassette";
+
+export const AppContext = createContext();
 
 export default function App() {
   const [isCassetteVisible, setCassetteVisible] = useState(false);
   const toggleCassetteVisible = () => {
+    toggleAudioPlayPause();
     setCassetteVisible(!isCassetteVisible);
-    console.log(isCassetteVisible);
+  };
+
+  const audioRef = useRef(null);
+
+  const toggleAudioPlayPause = () => {
+    if (audioRef.current) {
+      if (!isCassetteVisible) {
+        audioRef.current.play();
+      } else {
+        audioRef.current.pause();
+      }
+    }
   };
 
   return (
     <>
-      <div className="absolute top-[calc(50%_-_80px)] h-40 w-96 bg-purple-500"></div>
-
-      <div id="app" className="app relative w-full max-w-xs">
+      <div id="app" className="app relative w-full max-w-sm">
         <Atropos
           onClick={toggleCassetteVisible}
           highlight={true}
@@ -23,18 +36,27 @@ export default function App() {
           shadowScale={1}
           rotateXMax={45}
           rotateYMax={45}
-          scaleClassName=""
-          rotateClassName=""
-          innerClassName="overflow-visible"
+          innerClassName="overflow-visible after:bg-[#f2be4a] after:absolute after:w-full after:h-full after:block after:top-0"
           shadowOffset={50}
         >
+          {/* <audio
+            ref={audioRef}
+            src="assets/songs/Idol-YOASOBI.mp3"
+            loop
+            preload="auto"
+          ></audio> */}
+          <div className="container-content absolute grid h-full w-full place-items-center">
+            <AppContext.Provider
+              value={{ isCassetteVisible, setCassetteVisible }}
+            >
+              <Cassette />
+            </AppContext.Provider>
+            <HolographicStickert />
+          </div>
           <span className="face-top"></span>
           <span className="face-left"></span>
           <span className="face-right"></span>
           <span className="face-bottom"></span>
-          <div className="container-content absolute grid h-full w-full place-items-center bg-white">
-            <div className="h-40 w-64 bg-blue-500"></div>
-          </div>
           <div
             className={`container origin-left transition-transform duration-700 ${
               isCassetteVisible ? "active" : ""
@@ -43,33 +65,33 @@ export default function App() {
             <img
               className="relative"
               data-atropos-offset="0"
-              src="assets/oshi-no-ko.webp"
+              src="assets/front-page/oshi-no-ko.webp"
               alt=""
             />
             {/* piezas */}
             <img
               className="absolute left-[35px] top-[37.5%] w-[36%] md:left-11"
               data-atropos-offset="15"
-              src="assets/hand-microphone.webp"
+              src="assets/front-page/hand-microphone.webp"
               alt=""
             />
             <img
               className="absolute right-[9px] top-[5.5%] w-[33%] md:right-3"
               data-atropos-offset="15"
-              src="assets/rabbit.webp"
+              src="assets/front-page/rabbit.webp"
               alt=""
             />
             <img
               className="absolute right-[15.5%] top-[25%] w-[46.5%]"
               data-atropos-offset="15"
-              src="assets/hand.webp"
+              src="assets/front-page/hand.webp"
               alt=""
             />
             {/* ... */}
             <img
               data-atropos-offset="30"
               className="absolute left-10 top-10 w-[30%]"
-              src="assets/logo.webp"
+              src="assets/front-page/logo.webp"
               alt=""
             />
           </div>
