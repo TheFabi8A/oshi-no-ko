@@ -12,7 +12,13 @@
   font-display: swap;
 }
 
-[class^="face"] {
+*,
+*::after,
+*::before {
+  transform-style: preserve-3d;
+}
+
+:root {
   --gradient: linear-gradient(
     45deg,
     hsl(241deg 36% 31%) 0%,
@@ -42,54 +48,49 @@
   );
 }
 
+[class^="face"] {
+  position: absolute;
+  z-index: 10;
+  backface-visibility: visible;
+}
+
 .container.active {
   transform: rotateY(-110deg);
 }
 
 .container-content {
-  transform: translateZ(-10px);
+  z-index: 10;
+  transform: translateZ(-50px);
 }
 
 .face-top {
   width: 100%;
   height: 50px;
   background-image: var(--gradient);
-  position: absolute;
   left: 0;
   top: 0;
   transform: translateZ(-50px) rotateX(90deg) !important;
   transform-origin: center top;
-  z-index: 10;
-  transform-style: preserve-3d;
-  backface-visibility: visible;
 }
 
 .face-left {
   width: 50px;
   height: 100%;
   background-image: var(--gradient);
-  position: absolute;
   left: 0;
   top: 0;
   transform: translateZ(-50px) rotateY(-90deg) !important;
   transform-origin: left center;
-  z-index: 10;
-  transform-style: preserve-3d;
-  backface-visibility: visible;
 }
 
 .face-right {
   width: 50px;
   height: 100%;
   background-image: var(--gradient);
-  position: absolute;
   right: 0;
   top: 0;
   transform: translateZ(-50px) rotateY(90deg) !important;
   transform-origin: right center;
-  z-index: 10;
-  transform-style: preserve-3d;
-  backface-visibility: visible;
 }
 
 .face-bottom {
@@ -101,9 +102,6 @@
   bottom: 0;
   transform: translateZ(-50px) rotateX(-90deg) !important;
   transform-origin: center bottom;
-  z-index: 10;
-  transform-style: preserve-3d;
-  backface-visibility: visible;
 }
 
 .container::after {
@@ -124,6 +122,47 @@
 
 .atropos-inner::after {
   transform: translateZ(-50px);
+  background-size: cover;
+
+  /* background-position: 0 200px; */
+  background-repeat: no-repeat;
+}
+
+@keyframes atropos-inner-after {
+  0% {
+    background-image:
+    url("assets/back-page/ai.webp");
+  }
+
+  17% {
+    background-image:
+    url("assets/back-page/akane.webp");
+  }
+
+  34% {
+    background-image:
+    url("assets/back-page/mem-cho.webp");
+  }
+
+  51% {
+    background-image:
+    url("assets/back-page/kana.webp");
+  }
+
+  68% {
+    background-image:
+    url("assets/back-page/ruby.webp");
+  }
+
+  85% {
+    background-image:
+    url("assets/back-page/aqua.webp");
+  }
+
+  100% {
+    background-image:
+    url("assets/back-page/ai.webp");
+  }
 }
 
 /*! stickert */
@@ -178,16 +217,80 @@
   animation: tape-reel-1 56.25s linear infinite alternate;
 }
 
+@keyframes tape-reel-1 {
+  from {
+    transform: scale(2);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+}
+
 .tape-reel-2.active {
   animation: tape-reel-2 56.25s linear infinite alternate;
 }
 
-.cassette {
-  background-color: #303030;
+@keyframes tape-reel-2 {
+  from {
+    transform: scale(1.25);
+  }
+
+  to {
+    transform: scale(2);
+  }
 }
 
-.capstan-rollers {
-  animation: spin 3s infinite linear;
+.cassette {
+  background-color: #303030;
+  transform: translateZ(35px) scale(0.9);
+}
+
+.cassette > [class^="face"] {
+  --size: 35px;
+  --color: #303030;
+
+  z-index: 10;
+}
+
+.face-top-cassette {
+  width: 100%;
+  height: var(--size);
+  background-color: var(--color);
+  left: 0;
+  top: 0;
+  transform: translateZ(calc(-1 * var(--size))) rotateX(90deg);
+  transform-origin: center top;
+}
+
+.face-left-cassette {
+  width: var(--size);
+  height: 100%;
+  background-color: var(--color);
+  left: 0;
+  top: 0;
+  transform: translateZ(calc(-1 * var(--size))) rotateY(-90deg);
+  transform-origin: left center;
+}
+
+.face-right-cassette {
+  width: var(--size);
+  height: 100%;
+  background-color: var(--color);
+  right: 0;
+  top: 0;
+  transform: translateZ(calc(-1 * var(--size))) rotateY(90deg);
+  transform-origin: right center;
+}
+
+.face-bottom-cassette {
+  width: 100%;
+  height: var(--size);
+  background-color: var(--color);
+  left: 0;
+  bottom: 0;
+  transform: translateZ(calc(-1 * var(--size))) rotateX(-90deg);
+  transform-origin: center bottom;
 }
 
 .clip-trapezoid {
@@ -274,7 +377,6 @@
 
 .glass-tape-reel {
   transform: rotateX(45deg);
-  transform-origin: top;
   animation: glass-tape-reel 5s linear infinite alternate;
 }
 
@@ -291,25 +393,5 @@
 @layer components {
   .screw {
     @apply absolute z-10 grid h-3 w-3 place-items-center rounded-full;
-  }
-}
-
-@keyframes tape-reel-1 {
-  from {
-    transform: scale(2);
-  }
-
-  to {
-    transform: scale(1.25);
-  }
-}
-
-@keyframes tape-reel-2 {
-  from {
-    transform: scale(1.25);
-  }
-
-  to {
-    transform: scale(2);
   }
 }

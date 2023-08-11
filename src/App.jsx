@@ -36,16 +36,20 @@ export default function App() {
           shadowScale={1}
           rotateXMax={45}
           rotateYMax={45}
-          innerClassName="overflow-visible after:bg-[#f2be4a] after:absolute after:w-full after:h-full after:block after:top-0"
+          innerClassName={`overflow-visible after:absolute after:w-full after:h-full after:block after:top-0 after:left-0 ${
+            isCassetteVisible
+              ? "after:animate-[atropos-inner-after_10s_infinite]"
+              : ""
+          }`}
           shadowOffset={50}
         >
-          {/* <audio
+          <audio
             ref={audioRef}
             src="assets/songs/Idol-YOASOBI.mp3"
             loop
             preload="auto"
-          ></audio> */}
-          <div className="container-content absolute grid h-full w-full place-items-center">
+          ></audio>
+          <div className="container-content absolute h-full w-full">
             <AppContext.Provider
               value={{ isCassetteVisible, setCassetteVisible }}
             >
@@ -53,6 +57,7 @@ export default function App() {
             </AppContext.Provider>
             <HolographicStickert />
           </div>
+          <span className="face-top"></span>
           <span className="face-top"></span>
           <span className="face-left"></span>
           <span className="face-right"></span>

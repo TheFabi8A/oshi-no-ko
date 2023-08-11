@@ -7,8 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-prueba.css
-prueba.txt
+notas.txt
 
 node_modules
 dist

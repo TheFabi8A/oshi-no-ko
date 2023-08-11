@@ -6,7 +6,13 @@ export default function Cassette() {
   const { isCassetteVisible } = useContext(AppContext);
   return (
     <>
-      <div className="cassette relative flex h-52 w-full scale-90 flex-col justify-between rounded-xl">
+      <div className="cassette relative flex h-52 w-full flex-col justify-between">
+        {/* faces */}
+        <span className="face-top-cassette"></span>
+        <span className="face-right-cassette"></span>
+        <span className="face-left-cassette"></span>
+        <span className="face-bottom-cassette"></span>
+        {/* ... */}
         <span
           className="absolute -left-[2px] bottom-10 h-10 w-[3px] bg-[#303030] before:absolute before:-bottom-[2px] before:left-[1px] before:h-1 before:w-1 before:-rotate-45 before:bg-[#303030] 
         after:absolute after:-top-[2px] after:left-[1px] after:h-1 after:w-1 after:rotate-45 after:bg-[#303030]"
@@ -26,7 +32,7 @@ export default function Cassette() {
           <div className="flex flex-col px-2">
             <div className="relative z-10 flex w-full items-center justify-between">
               <div className="flex flex-col items-center text-sm">
-                <span>サイド</span>
+                <p>サイド</p>
                 <span className="rounded-md border border-black px-2 font-black">
                   A
                 </span>
@@ -36,7 +42,7 @@ export default function Cassette() {
                 <p className="text-center text-xs">YOASOBI</p>
               </div>
               <div className="flex flex-col items-center text-sm">
-                <span>無料</span>
+                <p>無料</p>
                 <span className="rounded-md border border-black px-2 font-black">
                   PSD
                 </span>
@@ -74,7 +80,7 @@ export default function Cassette() {
                 <span className="absolute -bottom-[2px] right-[calc(25%_-_4px)] h-2 w-1 -rotate-[30deg] rounded-t-full bg-white"></span>
               </span>
               <span className="relative flex h-5 w-1/2 items-center self-start overflow-hidden rounded-sm bg-[#f2be4a] pt-2">
-                <span className="glass-tape-reel absolute left-0 top-0 z-10 h-full w-full bg-black/20 outline outline-1 outline-white backdrop-blur-[0.75px]"></span>
+                <span className="glass-tape-reel absolute left-0 top-0 z-10 h-full w-full origin-top bg-black/20 outline outline-1 outline-white backdrop-blur-[0.75px]"></span>
                 <span
                   className={`tape-reel-1 absolute -left-[74px] block h-20 w-20 scale-[2] rounded-full ${
                     isCassetteVisible ? "active" : ""
@@ -99,10 +105,12 @@ export default function Cassette() {
                 <span className="absolute -bottom-[2px] right-[calc(25%_-_4px)] h-2 w-1 -rotate-[30deg] rounded-t-full bg-white"></span>
               </span>
             </div>
-            <div className="flex items-center gap-12">
+            <div className="flex w-full items-center gap-12">
               <DolbySystemSVG />
               <p className="text-center text-[9px] font-bold text-black">
-                デザイン: TheFabi8A
+                デザイン:
+                <br />
+                <em>TheFabi8A</em>
               </p>
               <CompactCassetteSVG />
             </div>
@@ -110,10 +118,10 @@ export default function Cassette() {
         </div>
         <div className="clip-trapezoid relative z-10 h-12 w-[60%] self-center bg-[#2b2b2b]">
           <span className="clip-trapezoid absolute top-1 -z-10 h-full w-full scale-95 bg-[#303030] blur-xl"></span>
-          <span className="absolute bottom-2 left-5 z-10 h-4 w-4 rounded-full bg-[#f2be4a] shadow-[inset_1.5px_-1.5px_0_0_#000]"></span>
-          <span className="absolute bottom-2 right-5 z-10 h-4 w-4 rounded-full bg-[#f2be4a] shadow-[inset_-1.5px_-1.5px_0_0_#000]"></span>
-          <span className="absolute bottom-4 right-12 z-10 h-3 w-3 rounded-sm bg-[#f2be4a] shadow-[inset_-1.5px_-1.5px_0_0_#000]"></span>
-          <span className="absolute bottom-4 left-12 z-10 h-3 w-3 rounded-sm bg-[#f2be4a] shadow-[inset_1.5px_-1.5px_0_0_#000]"></span>
+          <span className="absolute bottom-2 left-5 z-10 h-4 w-4 rounded-full bg-[#f2be4a] shadow-[inset_1.5px_-1.5p_0_0_#ef5b82]"></span>
+          <span className="absolute bottom-2 right-5 z-10 h-4 w-4 rounded-full bg-[#f2be4a] shadow-[inset_-1.5px_-1.5px_0_0_#ef5b82]"></span>
+          <span className="absolute bottom-4 right-12 z-10 h-3 w-3 rounded-sm bg-[#f2be4a] shadow-[inset_-1.5px_-1.5px_0_0_#ef5b82]"></span>
+          <span className="absolute bottom-4 left-12 z-10 h-3 w-3 rounded-sm bg-[#f2be4a] shadow-[inset_1.5px_-1.5px_0_0_#ef5b82]"></span>
         </div>
         <span className="screw bottom-7 left-[calc(50%_-_6px)]"></span>
       </div>
