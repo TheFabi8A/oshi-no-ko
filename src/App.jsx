@@ -36,10 +36,8 @@ export default function App() {
           shadowScale={1}
           rotateXMax={45}
           rotateYMax={45}
-          innerClassName={`overflow-visible after:absolute after:w-full after:h-full after:block after:top-0 after:left-0 ${
-            isCassetteVisible
-              ? "after:animate-[atropos-inner-after_10s_infinite]"
-              : ""
+          innerClassName={`overflow-visible after:absolute after:w-full after:h-full after:block after:top-0 after:left-0 before:absolute before:w-full before:h-full before:block before:top-0 before:left-0 before:z-10 ${
+            isCassetteVisible ? "before:animate-[hue-infinite_5s_infinite]" : ""
           }`}
           shadowOffset={50}
         >
@@ -49,7 +47,7 @@ export default function App() {
             loop
             preload="auto"
           ></audio>
-          <div className="container-content absolute h-full w-full">
+          <div className="container-content absolute flex h-full w-full justify-end">
             <AppContext.Provider
               value={{ isCassetteVisible, setCassetteVisible }}
             >

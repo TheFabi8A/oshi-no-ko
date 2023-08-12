@@ -6,7 +6,11 @@ export default function Cassette() {
   const { isCassetteVisible } = useContext(AppContext);
   return (
     <>
-      <div className="cassette relative flex h-52 w-full flex-col justify-between">
+      <div
+        className={`cassette absolute left-0 top-0 flex h-52 w-full flex-col justify-between ${
+          isCassetteVisible ? "active" : ""
+        }`}
+      >
         {/* faces */}
         <span className="face-top-cassette"></span>
         <span className="face-right-cassette"></span>
@@ -118,7 +122,7 @@ export default function Cassette() {
         </div>
         <div className="clip-trapezoid relative z-10 h-12 w-[60%] self-center bg-[#2b2b2b]">
           <span className="clip-trapezoid absolute top-1 -z-10 h-full w-full scale-95 bg-[#303030] blur-xl"></span>
-          <span className="absolute bottom-2 left-5 z-10 h-4 w-4 rounded-full bg-[#f2be4a] shadow-[inset_1.5px_-1.5p_0_0_#ef5b82]"></span>
+          <span className="absolute bottom-2 left-5 z-10 h-4 w-4 rounded-full bg-[#f2be4a] shadow-[inset_1.5px_-1.5px_0_0_#ef5b82]"></span>
           <span className="absolute bottom-2 right-5 z-10 h-4 w-4 rounded-full bg-[#f2be4a] shadow-[inset_-1.5px_-1.5px_0_0_#ef5b82]"></span>
           <span className="absolute bottom-4 right-12 z-10 h-3 w-3 rounded-sm bg-[#f2be4a] shadow-[inset_-1.5px_-1.5px_0_0_#ef5b82]"></span>
           <span className="absolute bottom-4 left-12 z-10 h-3 w-3 rounded-sm bg-[#f2be4a] shadow-[inset_1.5px_-1.5px_0_0_#ef5b82]"></span>
