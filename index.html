@@ -5,7 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oshi no Ko</title>
+  <link rel="preload" href="front-page/oshi-no-ko.webp" as="image">
 </head>
+
+<style>
+  .atropos-inner::before {
+    transform: translateZ(-40px);
+    background: url("back-page/firma.webp") calc(100% - 6px) calc(100% + 45px) / 56% no-repeat;
+  }
+
+  .atropos-inner::after {
+    transform: translateZ(-50px);
+    background: url("back-page/ai.webp") top left / cover no-repeat;
+  }
+</style>
 
 <body class="font-ns-jp m-8 bg-black select-none md:p-0 overflow-hidden grid place-items-center min-h-screen">
   <div id="root"></div>

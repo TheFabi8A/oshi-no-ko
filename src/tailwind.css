@@ -12,6 +12,16 @@
   font-display: swap;
 }
 
+@keyframes hue-infinite {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -118,27 +128,6 @@
   background-blend-mode: overlay;
   mix-blend-mode: color-dodge;
   opacity: 1;
-}
-
-.atropos-inner::before {
-  transform: translateZ(-40px);
-  background: url("back-page/firma.webp") calc(100% - 6px)
-    calc(100% + 45px) / 56% no-repeat;
-}
-
-@keyframes hue-infinite {
-  from {
-    filter: hue-rotate(0deg);
-  }
-
-  to {
-    filter: hue-rotate(360deg);
-  }
-}
-
-.atropos-inner::after {
-  transform: translateZ(-50px);
-  background: url("back-page/ai.webp") top left / cover no-repeat;
 }
 
 /*! stickert */
