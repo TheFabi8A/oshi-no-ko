@@ -36,16 +36,16 @@ export default function App() {
           shadowScale={1}
           rotateXMax={45}
           rotateYMax={45}
-          innerClassName={`overflow-visible after:absolute after:w-full after:h-full after:block after:top-0 after:left-0 before:absolute before:w-full before:h-full before:block before:top-0 before:left-0 before:z-10 ${
+          innerClassName={`overflow-visible after:w-full after:absolute after:h-full after:block after:top-0 after:left-0 before:absolute before:w-full before:h-full before:block before:top-0 before:left-0 before:z-10 ${
             isCassetteVisible ? "before:animate-[hue-infinite_5s_infinite]" : ""
           }`}
           shadowOffset={50}
         >
           <audio
             ref={audioRef}
-            src="assets/songs/Idol-YOASOBI.mp3"
-            loop
+            src="songs/Idol-YOASOBI.mp3"
             preload="auto"
+            onEnded={() => setCassetteVisible(false)}
           ></audio>
           <div className="container-content absolute flex h-full w-full justify-end">
             <AppContext.Provider
@@ -68,33 +68,33 @@ export default function App() {
             <img
               className="relative"
               data-atropos-offset="0"
-              src="assets/front-page/oshi-no-ko.webp"
+              src="front-page/oshi-no-ko.webp"
               alt=""
             />
             {/* piezas */}
             <img
               className="absolute left-[35px] top-[37.5%] w-[36%] md:left-11"
               data-atropos-offset="15"
-              src="assets/front-page/hand-microphone.webp"
+              src="front-page/hand-microphone.webp"
               alt=""
             />
             <img
               className="absolute right-[9px] top-[5.5%] w-[33%] md:right-3"
               data-atropos-offset="15"
-              src="assets/front-page/rabbit.webp"
+              src="front-page/rabbit.webp"
               alt=""
             />
             <img
               className="absolute right-[15.5%] top-[25%] w-[46.5%]"
               data-atropos-offset="15"
-              src="assets/front-page/hand.webp"
+              src="front-page/hand.webp"
               alt=""
             />
             {/* ... */}
             <img
               data-atropos-offset="30"
               className="absolute left-10 top-10 w-[30%]"
-              src="assets/front-page/logo.webp"
+              src="front-page/logo.webp"
               alt=""
             />
           </div>
