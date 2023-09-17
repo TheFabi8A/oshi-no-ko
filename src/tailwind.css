@@ -139,7 +139,7 @@
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: contain;
-  mask-image: url("svg/star.svg");
+  mask-image: url("/svg/star.svg");
   background-image: conic-gradient(
     #fff,
     #000,
