@@ -1,8 +1,16 @@
-# React + Vite
+# Oshi No Ko - 3D
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Diseño 3D hecho con AtroposJS con temática del anime Oshi No Ko.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías y Librerías
+
+[![React](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white&labelColor=101010)]()
+[![AtroposJS](https://img.shields.io/badge/atropos_js-b33bf3?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)](https://atroposjs.com/)
+[![CSS](https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)]()
+[![Tailwindcss](https://img.shields.io/badge/tailwindcss-61DAFB?style=for-the-badge&logo=tailwindcss&logoColor=white&labelColor=101010)]()
+
+<div>
+<img src="https://raw.githubusercontent.com/TheFabi8A/oshi-no-ko/main/public/screenshots/oshi-no-ko-open.webp" alt="screenshot oshi no ko opened cassette" height="200" />
+</div>
