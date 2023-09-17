@@ -5,9 +5,9 @@
 @font-face {
   font-family: "Noto Sans JP";
   src:
-    url("fonts/NotoSansJP-VariableFont.woff2") format("woff2"),
-    url("fonts/NotoSansJP-VariableFont.woff2") format("woff"),
-    url("fonts/NotoSansJP-VariableFont.ttf") format("truetype");
+    url("/fonts/NotoSansJP-VariableFont.woff2") format("woff2"),
+    url("/fonts/NotoSansJP-VariableFont.woff2") format("woff"),
+    url("/fonts/NotoSansJP-VariableFont.ttf") format("truetype");
   font-style: normal;
   font-display: swap;
 }
@@ -141,25 +141,25 @@
   mask-size: contain;
   mask-image: url("/svg/star.svg");
   background-image: conic-gradient(
-    #fff,
-    #000,
-    #fff,
-    #000,
-    #fff,
-    #000,
-    #fff,
-    #000
-  ),
+      #fff,
+      #000,
+      #fff,
+      #000,
+      #fff,
+      #000,
+      #fff,
+      #000
+    ),
     conic-gradient(#fff, #000, #fff, #000, #fff, #000, #fff, #000),
     radial-gradient(
-    circle at 40% 5%,
-    #2ad0ca,
-    #e1f664,
-    #feb0fe,
-    #abb3fc,
-    #5df7a4,
-    #58c4f6
-  );
+      circle at 40% 5%,
+      #2ad0ca,
+      #e1f664,
+      #feb0fe,
+      #abb3fc,
+      #5df7a4,
+      #58c4f6
+    );
   background-blend-mode: screen, difference, normal;
 }
 
