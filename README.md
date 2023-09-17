@@ -1,8 +1,12 @@
 # Oshi No Ko - 3D
 
+[![Vercel](https://img.shields.io/badge/site_live-000?style=for-the-badge&logo=vercel&logoColor=black&labelColor=fff)](https://oshi-no-ko-thefabi8a.vercel.app/)
+
 ## Descripción
 
-Diseño 3D hecho con AtroposJS con temática del anime Oshi No Ko.
+<div>
+<p>Diseño 3D hecho con AtroposJS con temática del Anime <strong>Oshi No Ko</strong>.</p>
+</div>
 
 ## Tecnologías y Librerías
 
