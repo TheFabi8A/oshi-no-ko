@@ -1,7 +1,7 @@
-export default function DolbySystemSVG() {
+export const DolbySystemIcon = (props) => {
   return (
     <svg
-      className="w-1/2"
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 3106 411"
@@ -20,4 +20,6 @@ export default function DolbySystemSVG() {
       />
     </svg>
   );
-}
+};
+
+export default DolbySystemIcon;

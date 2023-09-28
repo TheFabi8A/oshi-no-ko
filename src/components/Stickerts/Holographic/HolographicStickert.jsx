@@ -1,7 +1,9 @@
+import "./holographic-stickert.css";
+
 export default function HolographicStickert() {
   return (
     <>
-      <div className="stickert grid h-28 w-28 rotate-12 scale-75 animate-[hue-infinite_5s_infinite] place-items-center">
+      <div className="stickert grid h-28 w-28 rotate-12 scale-75 animate-[hue-infinite_10s_infinite] place-items-center">
         <div className="absolute grid h-full w-full place-items-center pt-4">
           <p className="text-center text-xs font-medium">
             TVアニメ <br /> 第2期も <br /> 決定!!

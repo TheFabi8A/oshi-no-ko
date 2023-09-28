@@ -1,0 +1,41 @@
+{
+  "icons": [
+    {
+      "density": "0.75",
+      "sizes": "36x36",
+      "src": "",
+      "type": "image/webp"
+    },
+    {
+      "density": "1.0",
+      "sizes": "48x48",
+      "src": "",
+      "type": "image/webp"
+    },
+    {
+      "density": "1.5",
+      "sizes": "72x72",
+      "src": "",
+      "type": "image/webp"
+    },
+    {
+      "density": "2.0",
+      "sizes": "96x96",
+      "src": "",
+      "type": "image/webp"
+    },
+    {
+      "density": "3.0",
+      "sizes": "144x144",
+      "src": "",
+      "type": "image/webp"
+    },
+    {
+      "density": "4.0",
+      "sizes": "192x192",
+      "src": "",
+      "type": "image/webp"
+    }
+  ],
+  "name": "Oshi No Ko 3D"
+}

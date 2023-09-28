@@ -1,7 +1,7 @@
-export default function CompactCassetteSVG() {
+export const CompactCassetteIcon = (props) => {
   return (
     <svg
-      className="w-1/2"
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 2256 469"
@@ -16,4 +16,6 @@ export default function CompactCassetteSVG() {
       />
     </svg>
   );
-}
+};
+
+export default CompactCassetteIcon;
