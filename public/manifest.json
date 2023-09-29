@@ -1,7 +1,7 @@
 {
   "name": "Oshi No Ko 3D",
   "short_name": "Oshi No Ko",
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#f336aa",
   "theme_color": "#f336aa",
