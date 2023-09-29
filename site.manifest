@@ -1,0 +1,39 @@
+{
+  "name": "",
+  "short_name": "",
+  "icons": [
+    {
+      "sizes": "36x36",
+      "src": "/android-icon-36x36.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "48x48",
+      "src": "/android-icon-48x48.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "72x72",
+      "src": "/android-icon-72x72.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "96x96",
+      "src": "/android-icon-96x96.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "144x144",
+      "src": "/android-icon-144x144.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "192x192",
+      "src": "/android-icon-192x192.png",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f336aa",
+  "background_color": "#f336aa",
+  "display": "standalone"
+}
