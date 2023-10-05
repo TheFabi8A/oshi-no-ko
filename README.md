@@ -1,6 +1,6 @@
 # Oshi No Ko - 3D
 
-[![Vercel](https://img.shields.io/badge/site_live-000?style=for-the-badge&logo=vercel&logoColor=black&labelColor=fff)](https://oshi-no-ko-thefabi8a.vercel.app/)
+[![Vercel](https://img.shields.io/badge/site_live-000?style=for-the-badge&logo=vercel&logoColor=black&labelColor=fff)](https://oshi-no-ko-3d.vercel.app//)
 
 ## Descripción
 
